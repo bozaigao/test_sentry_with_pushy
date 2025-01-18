@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable react-native/no-inline-styles */
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import {
   StyleSheet,
   Platform,
@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   Image,
   Switch,
+  TouchableHighlight,
 } from 'react-native';
 import {
   Icon,
@@ -25,6 +26,7 @@ import TestConsole from './TestConsole';
 
 import _updateConfig from '../update.json';
 import {PushyProvider, Pushy, usePushy} from 'react-native-update';
+import * as Sentry from '@sentry/react-native';
 const {appKey} = _updateConfig[Platform.OS];
 
 function App() {
@@ -49,8 +51,34 @@ function App() {
   const [showCamera, setShowCamera] = useState(false);
   const lastParsedCode = useRef('');
 
+  const testError = () => {
+    throw new Error('😁Sentry error!' + new Date().getTime());
+  };
+
+  useEffect(() => {
+    Sentry.init({
+      dsn: 'https://3809714074da476d40b0f68d84cdf84a@o562025.ingest.us.sentry.io/4508663331553280',
+      // Set tracesSampleRate to 1.0 to capture 100% of transactions for tracing.
+      // We recommend adjusting this value in production.
+      tracesSampleRate: 1.0,
+      // profilesSampleRate is relative to tracesSampleRate.
+      // Here, we'll capture profiles for 100% of transactions.
+      profilesSampleRate: 1.0,
+    });
+  }, []);
+
   return (
     <View style={styles.container}>
+      <TouchableHighlight
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: 'red',
+        }}
+        onPress={testError}>
+        <Text>触发sentry error</Text>
+      </TouchableHighlight>
+      <Text style={styles.welcome}>😁Update success!</Text>
       <Text style={styles.welcome}>欢迎使用Pushy热更新服务</Text>
       <View style={{flexDirection: 'row'}}>
         <Text>
@@ -197,7 +225,7 @@ const pushyClient = new Pushy({
   debug: true,
 });
 
-export default function Root() {
+const Root = () => {
   return (
     <PushyProvider client={pushyClient}>
       <PaperProvider>
@@ -205,4 +233,6 @@ export default function Root() {
       </PaperProvider>
     </PushyProvider>
   );
-}
+};
+
+export default Sentry.wrap(Root);
