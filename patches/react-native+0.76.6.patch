@@ -1,0 +1,26 @@
+diff --git a/node_modules/react-native/scripts/ios-configure-glog.sh b/node_modules/react-native/scripts/ios-configure-glog.sh
+index 02a875d..de5b7fd 100755
+--- a/node_modules/react-native/scripts/ios-configure-glog.sh
++++ b/node_modules/react-native/scripts/ios-configure-glog.sh
+@@ -20,6 +20,21 @@ if [ -z "$CURRENT_ARCH" ] || [ "$CURRENT_ARCH" == "undefined_arch" ]; then
+     fi
+ fi
+ 
++macos_version=$(sw_vers -productVersion | cut -d '.' -f 1)
++if [ "$macos_version" -gt 13 ]; then
++    echo "macOS version is greater than 13."
++    PATCH_URL=https://gist.githubusercontent.com/SnowGirls/9a00c4cb15c2d8c2e9bdc5a178c3461d/raw/fdb8f0d5487c0912d39eba45c5812f9b7df4f603/google_glog_configure_v0.3.5.patch
++    curl -O "$PATCH_URL"
++    PATCH_FILE=$(basename "$PATCH_URL")
++    git apply "$PATCH_FILE"
++    if [ $? -eq 0 ]; then
++        echo "✅ Patch successfully."
++    else
++        echo "🚫 Patch failed."
++    fi
++fi
++
++
+ # @lint-ignore-every TXT2 Tab Literal
+ if [ "$CURRENT_ARCH" == "arm64" ]; then
+     cat <<\EOF >>fix_glog_0.3.5_apple_silicon.patch
