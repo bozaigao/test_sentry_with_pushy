@@ -1,66 +1,23 @@
-# react-native-android-detox
+### 1.测试同时集成 pushy 和 sentry 手动触发报错
 
-[![e2e-android](https://github.com/remarkablemark/react-native-android-detox/actions/workflows/e2e-android.yml/badge.svg)](https://github.com/remarkablemark/react-native-android-detox/actions/workflows/e2e-android.yml)
+测试结果：sentry 平台收到报错，同时可以查看错误详细堆栈信息
+![sentry报错](./imgs/1.jpg)
+![sentry报错](./imgs/2.jpg)
 
-React Native Android Detox. The project has already been patched with the [additional Android configuration](https://wix.github.io/Detox/docs/introduction/project-setup/).
+### 2.测试热更新后手动触发报错
 
-## Prerequisites
+测试结果：sentry 平台收到报错，同时可以查看错误详细堆栈信息
+![sentry报错](./imgs/3.jpg)
+![sentry报错](./imgs/4.jpg)
+![sentry报错](./imgs/5.jpg)
 
-Follow the [environment setup](https://wix.github.io/Detox/docs/introduction/getting-started).
-
-## Install
-
-Clone the repository:
-
+### 3.如果同时集成Sentry和Pushy并且热更成功后触发报错在sentry平台看不到详细堆栈信息
+![sentry报错](./imgs/6.jpg)
+解决方案：请更新react-native-update、react-native-cli到最新版本，同时在xcode添加一个脚本：
 ```sh
-git clone https://github.com/remarkablemark/react-native-android-detox.git
-cd react-native-android-detox
+"../node_modules/react-native-update/scripts/sentry.sh"
 ```
+![sentry报错](./imgs/7.jpg)
 
-Install the dependencies:
-
-```sh
-yarn
-```
-
-## Build
-
-### Android (Debug)
-
-Build the Android debug app:
-
-```sh
-yarn detox build --configuration android.emu.debug
-```
-
-### Android (Release)
-
-Build the Android release app:
-
-```sh
-yarn detox build --configuration android.emu.release
-```
-
-## Test
-
-### Android (Debug)
-
-Start the app:
-
-```sh
-yarn start
-```
-
-Run the test:
-
-```sh
-yarn detox test --configuration android.emu.debug
-```
-
-### Android (Release)
-
-Run the test:
-
-```sh
-yarn detox test --configuration android.emu.release
-```
+### 4.上传sourcemap到sentry平台流程说明
+Xcode在每次编译成功后都会自动上传当前代码对应的的sourcemap到sentry平台，当后续有js源码变动热更需求后需要再次在Xcode执行Build操作，此时会自动上传新的sourcemap到sentry平台，同时会在项目根目录.pushy生成对应的资源文件，然后手动执行pushy bundleAfterXcodeBuild命令进行文件压缩打包成ppk，最后可以选择上传和绑定原生版本，至此成功发布热更新到pushy。

@@ -125,6 +125,7 @@
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
 				2177C9C260D54703D642190E /* [CP] Embed Pods Frameworks */,
 				B2FB411EFC954D6C91BBEDED /* Upload Debug Symbols to Sentry */,
+				93AC93EC2D3D1D5B004C420A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -213,6 +214,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AwesomeProject/Pods-AwesomeProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		93AC93EC2D3D1D5B004C420A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"../node_modules/react-native-update/scripts/sentry.sh\"\n";
+		};
 		B2FB411EFC954D6C91BBEDED /* Upload Debug Symbols to Sentry */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,7 +243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh ../node_modules/@sentry/react-native/scripts/sentry-xcode-debug-files.sh";
+			shellScript = "/bin/sh ../node_modules/@sentry/react-native/scripts/sentry-xcode-debug-files.sh\n";
 		};
 		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
