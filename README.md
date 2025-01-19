@@ -20,4 +20,4 @@
 ![sentry报错](./imgs/7.jpg)
 
 ### 4.上传sourcemap到sentry平台流程说明
-Xcode在每次编译成功后都会自动上传当前代码对应的的sourcemap到sentry平台，当后续有js源码变动热更需求后需要再次在Xcode执行Build操作，此时会自动上传新的sourcemap到sentry平台，同时会在项目根目录.pushy生成对应的资源文件，然后手动执行pushy bundleAfterXcodeBuild命令进行文件压缩打包成ppk，最后可以选择上传和绑定原生版本，至此成功发布热更新到pushy。
+Xcode在每次编译成功后都会自动上传当前代码对应的的sourcemap到sentry平台，当后续有js源码变动热更需求后需要再次执行Xcode Build操作，此时会自动上传新的sourcemap到sentry平台，同时会在项目根目录.pushy生成对应的资源文件，然后手动执行pushy bundleAfterXcodeBuild命令进行文件压缩打包成ppk，最后可以选择上传和绑定原生版本，至此成功发布热更新到pushy。
