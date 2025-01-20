@@ -13,7 +13,7 @@
 
 ### 3.如果同时集成Sentry和Pushy并且热更成功后触发报错在sentry平台看不到详细堆栈信息
 ![sentry报错](./imgs/6.jpg)
-解决方案：请更新react-native-update、react-native-cli到最新版本，同时在xcode添加一个脚本：
+解决方案：请更新react-native-update、react-native-cli到最新版本，同时在xcode添加一个脚本配置：
 ```sh
 "../node_modules/react-native-update/scripts/sentry.sh"
 ```
