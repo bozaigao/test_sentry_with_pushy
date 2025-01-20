@@ -32,5 +32,5 @@ apply from: new File(["node", "--print", "require.resolve('react-native-update/p
 ```
 ![sentry报错](./imgs/8.jpg)
 
-### 7. Anddroid上传sourcemap到sentry平台流程说明
+### 7. Android上传sourcemap到sentry平台流程说明
 AndroidStudio在每次编译成功后都会自动上传当前代码对应的的sourcemap到sentry平台，当后续有js源码变动热更需求后需要再次执行AS Build操作，此时会自动上传新的sourcemap到sentry平台，同时会在项目根目录.pushy生成对应的资源文件，然后手动执行pushy bundleAfterAndroidStudioBuild命令进行文件压缩打包成ppk，最后可以选择上传和绑定原生版本，至此成功发布热更新到pushy。
