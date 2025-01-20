@@ -1,0 +1,42 @@
+{
+  "buildFiles": [
+    "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/yanbo.he/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/android/app/.cxx/Debug/634y696h/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/yanbo.he/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/android/app/.cxx/Debug/634y696h/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "appmodules::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "appmodules",
+      "output": "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/android/app/build/intermediates/cxx/Debug/634y696h/obj/x86/libappmodules.so",
+      "runtimeFiles": [
+        "/Users/yanbo.he/.gradle/caches/8.10.2/transforms/712459f74e1b69cabe04723869743a98/transformed/fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/Users/yanbo.he/.gradle/caches/8.10.2/transforms/ffea390e40bce9ede11ecb704e97298f/transformed/react-android-0.76.6-debug/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/Users/yanbo.he/.gradle/caches/8.10.2/transforms/ffea390e40bce9ede11ecb704e97298f/transformed/react-android-0.76.6-debug/prefab/modules/reactnative/libs/android.x86/libreactnative.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/yanbo.he/Library/Android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/yanbo.he/Library/Android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
