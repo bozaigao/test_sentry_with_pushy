@@ -1,0 +1,79 @@
+{
+  "buildFiles": [
+    "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/node_modules/@sentry/react-native/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/node_modules/react-native-camera-kit/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
+    "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/node_modules/react-native-update/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/yanbo.he/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/android/app/.cxx/RelWithDebInfo/6r4y5l4h/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/yanbo.he/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/android/app/.cxx/RelWithDebInfo/6r4y5l4h/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "appmodules::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "appmodules",
+      "output": "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/android/app/build/intermediates/cxx/RelWithDebInfo/6r4y5l4h/obj/x86/libappmodules.so",
+      "runtimeFiles": [
+        "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/android/app/build/intermediates/cxx/RelWithDebInfo/6r4y5l4h/obj/x86/libreact_codegen_safeareacontext.so",
+        "/Users/yanbo.he/.gradle/caches/8.10.2/transforms/712459f74e1b69cabe04723869743a98/transformed/fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/Users/yanbo.he/.gradle/caches/8.10.2/transforms/257db84ad3faf58377224b519b461c59/transformed/react-android-0.76.6-release/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/Users/yanbo.he/.gradle/caches/8.10.2/transforms/257db84ad3faf58377224b519b461c59/transformed/react-android-0.76.6-release/prefab/modules/reactnative/libs/android.x86/libreactnative.so"
+      ]
+    },
+    "react_codegen_RCTPushySpec::@00400ec05bb7fb793cbc": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "react_codegen_RCTPushySpec"
+    },
+    "react_codegen_RNSentrySpec::@b85314237d91cb2ada57": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "react_codegen_RNSentrySpec"
+    },
+    "react_codegen_RNVectorIconsSpec::@479809fae146501fd34d": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "react_codegen_RNVectorIconsSpec"
+    },
+    "react_codegen_rncamerakit_specs::@d945e98661337998d651": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "react_codegen_rncamerakit_specs"
+    },
+    "react_codegen_safeareacontext::@7984cd80db47aa7b952a": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "react_codegen_safeareacontext",
+      "output": "/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/android/app/build/intermediates/cxx/RelWithDebInfo/6r4y5l4h/obj/x86/libreact_codegen_safeareacontext.so",
+      "runtimeFiles": [
+        "/Users/yanbo.he/.gradle/caches/8.10.2/transforms/712459f74e1b69cabe04723869743a98/transformed/fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/Users/yanbo.he/.gradle/caches/8.10.2/transforms/257db84ad3faf58377224b519b461c59/transformed/react-android-0.76.6-release/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/Users/yanbo.he/.gradle/caches/8.10.2/transforms/257db84ad3faf58377224b519b461c59/transformed/react-android-0.76.6-release/prefab/modules/reactnative/libs/android.x86/libreactnative.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/yanbo.he/Library/Android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/yanbo.he/Library/Android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

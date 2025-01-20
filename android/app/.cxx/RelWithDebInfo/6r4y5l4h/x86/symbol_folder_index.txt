@@ -1,0 +1,1 @@
+/Users/yanbo.he/Desktop/github/test_sentry_with_pushy/android/app/build/intermediates/cxx/RelWithDebInfo/6r4y5l4h/obj/x86
