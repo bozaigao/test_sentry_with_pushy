@@ -78,7 +78,7 @@ function App() {
         onPress={testError}>
         <Text>触发sentry error</Text>
       </TouchableHighlight>
-      {/* <Text style={styles.welcome}>😁Update success!</Text> */}
+      <Text style={styles.welcome}>😁Update success!</Text>
       <Text style={styles.welcome}>欢迎使用Pushy热更新服务</Text>
       <View style={{flexDirection: 'row'}}>
         <Text>
