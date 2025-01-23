@@ -1,6 +1,6 @@
 {
   "name": "test_sentry_with_pushy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
   "scripts": {
     "bundle:ios": "node scripts/build.js",
